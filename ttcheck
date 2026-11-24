@@ -1,0 +1,60 @@
+#!/usr/bin/python3
+# SPDX-FileCopyrightText: 2026 Shiro Nagashima <n.siro400@gmail.com>
+# SPDX-License-Identifier: BSD-3-Clause
+
+import sys
+
+
+def fmt(m):
+    return f"{m // 60:02d}:{m % 60:02d}"
+
+
+def main():
+    start = 0
+    if len(sys.argv) == 2:
+        try:
+            h, m = map(int, sys.argv[1].split(":"))
+            if h < 0 or not (0 <= m < 60):
+                raise ValueError
+            start = h * 60 + m
+        except ValueError:
+            sys.exit("Error: Start time must be HH:MM")
+    elif len(sys.argv) > 2:
+        sys.exit("Usage: ttcheck [HH:MM]")
+
+    cur, total, warns = start, 0, 0
+    prev_members = set()
+
+    for line in sys.stdin:
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        parts = [p.strip() for p in line.split(",")]
+        if len(parts) < 2:
+            sys.exit("Error: Use 'Band,Minutes[,Members]'")
+        try:
+            dur = int(parts[1])
+            if dur <= 0:
+                raise ValueError
+        except ValueError:
+            sys.exit(f"Error: Invalid minutes '{parts[1]}'")
+
+        members = set(parts[2].split()) if len(parts) >= 3 else set()
+        overlap = prev_members & members
+        warn = ""
+        if overlap:
+            warns += 1
+            warn = f" [WARN: {' '.join(sorted(overlap))}]"
+
+        print(f"{fmt(cur)} - {fmt(cur + dur)} ({dur:2d}m) | {parts[0]}{warn}")
+        cur += dur
+        total += dur
+        prev_members = members
+
+    if total == 0:
+        sys.exit("Error: Empty input")
+    print(f"Total: {total} min ({fmt(total)}) | Conflicts: {warns}")
+
+
+if __name__ == "__main__":
+    main()
