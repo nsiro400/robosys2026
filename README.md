@@ -52,5 +52,5 @@ $ printf "1.5\n2.5\n3\n" | ./plus
 
 ## ライセンス
 - このソフトウェアパッケージは、3条項BSDライセンスの下、再頒布および使用が許可されます。
-- © 2026 Taro Suzuk(`plusコマンド`)
+- © 2026 Taro Suzuki(`plusコマンド`)
 - © 2026 Shiro Nagashima (`ttcheckコマンド`)
