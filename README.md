@@ -1,6 +1,6 @@
 # robosys2026
 ![test](https://github.com/nsiro400/robosys2026/actions/workflows/test.yml/badge.svg)
-↑ テスト結果を反映したバッジの画像が埋め込まれる
+
 
 ## ttcheck
 
@@ -15,12 +15,14 @@
 ### 使い方・実行例
 引数で開始時刻（`HH:MM`）を指定できます。省略した場合は `00:00` 開始になります。
 
-```bash
+```
+bash
 $ printf "NEE,15,佐藤 鈴木\nヨルシカ,22,佐藤 高橋\nアニソン,18,伊藤\n" | ./ttcheck 10:00
 10:00 - 10:15 (15m) | NEE
 10:15 - 10:37 (22m) | ヨルシカ [WARN: 佐藤]
 10:37 - 10:55 (18m) | アニソン
-Total: 55 min (00:55) | Conflicts: 1```
+Total: 55 min (00:55) | Conflicts: 1
+```
 
 # plusコマンド
 標準入力から読み込んだ数字を足す。
@@ -30,13 +32,15 @@ Total: 55 min (00:55) | Conflicts: 1```
 - 数値以外の文字や空行が含まれている場合はエラー終了します。
 
 ### 使い方・実行例
-```bash
+```
+bash
 $ seq 5 | ./plus
 15
 
 - 小数を含む場合も計算できます。
 $ printf "1.5\n2.5\n3\n" | ./plus
-7.0```
+7.0
+```
 
 
 ## 必要なソフトウェア
