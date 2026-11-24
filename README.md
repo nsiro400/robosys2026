@@ -2,7 +2,7 @@
 ![test](https://github.com/nsiro400/robosys2026/actions/workflows/test.yml/badge.svg)
 
 
-## ttcheck
+## ttcheckコマンド
 
 バンドの出演リストを標準入力から読み込み、各バンドの開始・終了時刻の自動計算と、メンバーの連続出演（連チャン）の検知を行うコマンドです。
 
@@ -52,5 +52,5 @@ $ printf "1.5\n2.5\n3\n" | ./plus
 
 ## ライセンス
 - このソフトウェアパッケージは、3条項BSDライセンスの下、再頒布および使用が許可されます。
-- © 2026 Taro Suzuki
-- © 2026 Shiro Nagashima (`ttcheck`)
+- © 2026 Taro Suzuk(`plusコマンド`)
+- © 2026 Shiro Nagashima (`ttcheckコマンド`)
