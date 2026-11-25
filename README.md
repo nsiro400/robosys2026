@@ -8,6 +8,11 @@
 
 バンドの出演リストを標準入力から読み込み、各バンドの開始・終了時刻の自動計算と、メンバーの連続出演（連チャン）の検知を行うコマンドです。
 
+### インストール
+```bash
+$ git clone [https://github.com/nsiro400/robosys2026.git](https://github.com/nsiro400/robosys2026.git)
+$ cd robosys2026
+
 ### 入力形式
 `バンド名,持ち時間(分),メンバー(スペース区切り)`
 
