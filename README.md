@@ -10,7 +10,7 @@
 
 ### インストール
 ```bash
-$ git clone [https://github.com/nsiro400/robosys2026.git](https://github.com/nsiro400/robosys2026.git)
+$ git clone https://github.com/nsiro400/robosys2026.git
 $ cd robosys2026
 ```
 
