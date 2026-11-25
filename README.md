@@ -1,6 +1,4 @@
 # robosys2026
-このリポジトリはロボットシステム学の授業で利用するリポジトリです。いくつかのソフトウェアパッケージを公開しています。
-
 ![test](https://github.com/nsiro400/robosys2026/actions/workflows/test.yml/badge.svg)
 
 
@@ -28,7 +26,6 @@ $ printf "NEE,15,佐藤 鈴木\nヨルシカ,22,佐藤 高橋\nアニソン,18,�
 10:00 - 10:15 (15m) | NEE
 10:15 - 10:37 (22m) | ヨルシカ [WARN: 佐藤]
 10:37 - 10:55 (18m) | アニソン
-Total: 55 min (00:55) | Conflicts: 1
 ```
 
 
