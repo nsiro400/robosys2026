@@ -12,6 +12,7 @@
 ```bash
 $ git clone [https://github.com/nsiro400/robosys2026.git](https://github.com/nsiro400/robosys2026.git)
 $ cd robosys2026
+```
 
 ### 入力形式
 `バンド名,持ち時間(分),メンバー(スペース区切り)`
